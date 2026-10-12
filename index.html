@@ -14,10 +14,25 @@
             font-family: monospace;
             background-color: #111;
             color: #00ff00;
+            padding: 20px; /* Adds space so text doesn't touch edges on phones */
+            box-sizing: border-box;
         }
         p {
             font-size: 1.8rem;
             letter-spacing: 3px;
+            word-break: break-all; /* Ensures long strings wrap to next line if screen is too narrow */
+            text-align: center;
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px; /* Base size reduction for mobile */
+            }
+            p {
+                font-size: 1.2rem; /* Smaller font size for mobile screens */
+                letter-spacing: 1px; /* Tighter spacing for readability */
+            }
         }
     </style>
 </head>
